@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+	<head >
+		<meta charset="utf-8" />
+		<title>腾讯网</title>
+		<style type="text/css">
+			*
+			{
+				margin: 0;
+				padding: 0;
+			}
+			clearfix:after
+			{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.total
+			{
+				width: 92%;
+				position: absolute;
+				left: 4%;
+				right: 4%;
+			}
+			.first
+			{
+				height: 100px;
+				width: 100%;
+			}
+			.biao
+			{
+				width: 150px;
+				height: 100px;
+				float: left;
+				position: absolute;
+				z-index: 6;
+			}
+			.sou
+			{
+				width: 800px;
+				height: 100px;
+				position: absolute;
+			    left: 150px;
+				top: 0px;
+				float: left;
+				z-index: 3;
+				background-color:;
+			}
+			
+			.dropbtn {
+				padding-left: 30px;
+				padding-top: 10px;
+				font-size: 16px;
+				border-bottom-left-radius: 25px;
+				border-top-left-radius:25px;
+				border-right: none;
+				cursor: pointer;
+				background-color: white;
+			}
+			
+			.dropdown {
+				position: relative;
+				display: inline-white;
+				position: absolute;
+				left: 280px;
+				top: 30px;
+			}
+			
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				min-width: 160px;
+				
+				position: absolute;
+				left: 0px;
+				top: 30px;
+				background-color: white;
+			}
+			
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			
+			.dropdown:hover .dropbtn {
+				background-color: white;
+			}
+			
+			.deng
+			{
+				width: 250px;
+				height: 50px;
+				position:absolute;
+				top: 20px;
+				right:0px ;
+			
+			}
+			.qzone{
+	float: left;
+	position: absolute;
+	right: 80px;
+}
+
+.qzone a{
+	display: inline-block;
+	width: 35px;
+	height: 40px;
+	background-image: url(../img/zhzh.png);
+	background-position: 0 -93px;
+}
+
+.qzone a:hover{
+	background-position: 0 -143px;
+}
+
+.mail a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image:url(../img/zhzh.png);
+	background-position: 0 -188px;
+}
+
+.mail{
+	float: left;
+}
+
+.mail a:hover{
+	background-position: 0 -238px;
+}
+			.dyi
+			{
+				width: 10px;
+				height: 10px;
+				background-position: (0,0);
+			}
+			.kuang
+			{
+				width: 200px;
+				height: 33px;
+				position: absolute;
+				left: 344px;
+				top: 30px;
+				
+				cursor: pointer;
+				background-color: white;
+				border:1px black solid;
+				border-left: none;
+				border-right: none;
+			}
+			.sougou
+			{
+				width: 80px;
+				height: 34px;
+				position: absolute;
+				left: 504px;
+				top: 30px;
+				font-size: 16px;
+				cursor: pointer;
+				background-color: #1974D7;
+				border-bottom-left-radius: 25px;
+				border-top-left-radius:25px;
+				border-bottom-right-radius: 25px;
+				border-top-right-radius:25px;
+				
+			}
+			.daohang
+			{
+				width: 100%;
+				height: 50px;
+				background-color: #1974D7;
+				position: absolute;
+				top: 100px;
+				float: left;
+				line-height: 50px;
+			}
+			a:link {
+				text-decoration: none;
+			}
+			.third
+			{
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				top: 150px;
+			}
+			.thyi
+			{
+				width: 60%;
+				height: 100px;
+				position: absolute;
+				left: 0px;
+				top: 15px;
+			}
+			.ther
+			{
+				width: 35%;
+				height: 100px;
+				position: absolute;
+				right: 0px;
+				top: 15px;
+			}
+			.four
+			{
+				width: 100%;
+				height: 800px;
+				position: absolute;
+				top: 250px;
+			}
+			.yi
+			{
+				width: 31%;
+				height:800px ;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				text-decoration: ;
+			}
+			.box1
+			{
+				width: 60%;
+				height: 120px;
+				float: left;
+				position: absolute;
+				left: 0px;
+				top: 375px;
+				z-index: 6;
+			}
+			.box2
+			{
+				width: 40%;
+				height: 200px;
+				position: absolute;
+				float: right;
+				 left: 60%;
+				 top: 375px;
+				 z-index: 5;
+				 bottom: 310px;
+			}
+			.yier
+			{
+				width: 4%;
+				height:800px ;
+				position: absolute;
+				left: 31%;
+				top: 0px;
+				z-index: 4;
+			}
+			.er
+			{
+				width: 31%;
+				height:800px ;
+				position: absolute;
+				left: 35%;
+				right: 34%;
+				top: 0px;
+				z-index: 3;
+				
+			}
+			.box4
+			{
+				width: 100%;
+				height: 423px;
+				position: absolute;
+				top: 395px;
+			}
+			.ersan
+			{
+				width: 4%;
+				height:800px ;
+				position: absolute;
+				right: 30%;
+				top: 0px;
+				top: 0px;
+				z-index: 2;
+			}
+			.san
+			{
+				width: 30%;
+				height:800px ;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				z-index: 1;
+			}
+			.sanyi
+			{
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				right: 0px;
+			}
+			.saner
+			{
+				width: 100%;
+				height: 600px;
+				position: absolute;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="total">
+			<div class="first">
+				<div class="biao">
+				<a href="#biao"><img src="../img/u=4262948378,696889495&fm=26&gp=0.jpg" width="150px" height="100px"/>	</a>
+				</div>
+				<div class="sou">
+					<div class="dropdown">
+				<button class="dropbtn">网页</button>
+				<div class="dropdown-content">
+					<a href=""> 网页</a>
+					<a href=""> 图片</a>
+					<a href="">音乐 </a>
+					<a href="">视频 </a>
+					<a href=""> 地图</a>
+					<a href=""> 问问</a>
+					<a href="">百科 </a>
+					<a href="">新闻</a>
+					<a href="">时尚</a>
+				</div>
+			</div>
+			<div class="kuang">
+			</div>
+			<div class="sougou"><font color="white">&nbsp;搜狗搜索</font></div>
+				</div>
+				<div class="deng">
+					<div class="qzone"><a href="https://qzone.qq.com/" target="_blank"></a></div>
+					<div class="mail"><a href="https://mail.qq.com/" target="_blank"></a></div>
+				</div>
+			</div>
+			<div class="daohang" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">新闻</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">视频</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">图片</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">军事</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">体育</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">NBA</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">娱乐</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">财经</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">科技</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">文化</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">财经</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">科技</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">时尚</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">汽车</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href=""><font size="4" color="#FFFFFF">更多</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="third">
+				<div class="thyi">
+					<a href=""><img src="../img/AAA.png"width="100%"height="70px"</a>
+				</div>
+				<div class="ther">
+					<a href=""><img src="../img/ninja153907290259802.png"width="100%"height="70px" /></a>
+				</div>
+			</div>
+			<div class="four">
+				<div class="yi">
+					<a href=""><font size="5" color="#1974D7"><b>要闻</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><font size="5" color="#1974D7"><b>湖南新闻</b></font></a>
+	                 <br />
+	                 <br />
+	                <a href=""><font size="4"color="black">习近平谈中法关系：面向世界、面向未来、面向人民</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">习近平同法国总统共同出席中法经济峰会闭幕式并致辞</font></a>
+                   <br />
+                   <br /> 
+	                <a href=""><font size="3"color="black">这些话，习近平讲给世界听 发出时代强音 共享美好未来</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">韩正会见香港特别行政区行政长官林郑月娥</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">东方风起 江河奔腾 开放创新 合作共赢</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">以制度型开放优化营商环境 理上网来</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">取消已加征关税是达成协议的必要条件 火焰蓝一周年</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">进博会，为世界经济增添新动能 2019进博会</font></a>
+                     <br />
+                     <br />
+                    
+                     <div class="box1">
+                     <img src="../img/1000.jpg" width="100%" height="120px"/></div>
+                     <div class="box2">
+	                <a href=""><font size="3"color="black">《简-爱》作家夏洛蒂未出版袖珍手稿将拍卖 估价580万元</font></a>
+                     </div>
+                     <br />
+                     <br />
+                     <br />
+                     <br />
+                     <br />
+                     <br />
+                     
+	                <a href=""><font size="3"color="black">我国进入寒潮多发季 “双十一”强冷空气将再度来袭</font></a>
+                     
+                     <br />
+                     <br />
+	                <a href=""><font size="3"color="black">给6万吨“钢铁巨兽”洗澡：首艘国产航母开始进行舰体清洁</font></a>
+                     <br />
+                     <br />
+	                <a href=""><font size="3"color="black">应急管理部：消防员干满12年退出的，政府负责安排工作</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">缅北安全形势严峻 外交部提醒中国公民暂勿前往</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="black">江西鹰潭警方悬赏百万缉捕百名在逃人员 涉命案等</font></a>
+				</div>
+				<div class="yier"></div>
+				<div class="er">
+					<a href=""><font size="5" color="#1974D7"><b>今日话题</b></font></a>
+	                 <br />
+	                 <br />
+	                <a href=""><font size="4"color="black">第二届进博会，亮点有这些</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="#1974D7">人民日报评论</font></a><a href=""><font size="3"color="black">| 让教师更好聚焦主业</font></a>
+                   <br />
+                   <br /> 
+	                <a href=""><font size="3"color="#1974D7">新京报</font></a><a href=""><font size="3"color="black">| 悬赏1.8亿求解技术难题，也是为知识"市场估价"</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="#1974D7">棱镜</font></a><a href=""><font size="3"color="black">| 中国最大二手农机村的流量时代</font></a>
+                    <br />
+                    <br />
+	               <a href=""><font size="3"color="#1974D7">深网</font></a><a href=""><font size="3"color="black">| “老赖”名单上的创业者们值得原谅吗？</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="#1974D7">谷雨</font></a><a href=""><font size="3"color="black">| 28岁上海金融女硬核抗癌380天 自救热文获医生点赞</font></a>
+                    <br />
+                    <br />
+	                <a href=""><font size="3"color="#1974D7">腾讯大家</font></a><a href=""><font size="3"color="black">| 田忌赛马的故事，能证明中国人自古不守规则？</font></a>
+                    <br />
+                    <br />
+                    <div class="box4">
+                    	<a href=""><img src="../img/asa.png"width="100%"height="385px" /></a>
+                    </div>
+                   </div>
+				<div class="ersan"></div>
+				<div class="san">
+					<div class="sanyi">
+						<a href=""><font color="black">新闻APP &nbsp;    体育APP &nbsp;    企鹅号 &nbsp;    快报 &nbsp;    视频 &nbsp;    浏览器 &nbsp;    微视 &nbsp;    
+微信 &nbsp;    QQ空间 &nbsp;    企业 &nbsp;    微信 &nbsp;    邮箱 &nbsp;    腾讯云 &nbsp;    电脑管家 &nbsp;    会员 &nbsp;    
+LOL &nbsp;    DNF &nbsp;    CF &nbsp;    王者 &nbsp;    单机游戏 &nbsp;    火影OL &nbsp;    天刀 &nbsp;    爱玩 &nbsp;    逆战 &nbsp;    
+软件 &nbsp;    Q币 &nbsp;    京东 &nbsp;    腾讯地图 &nbsp;    腾讯文档 &nbsp;    理财通</font></a>
+					</div>
+					<div class="saner">
+					<a href=""><font size="5" color="#1974D7"><b>热门赛事</b></font></a>
+					<br />
+					<a href=""><img src="../img/jasjs.png"width="100%" height="513px"/></a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
