@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.flex-container
+			{
+				display: flex;
+				display: -webkit-flex;
+				width:1500px;
+				height: ;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+			}
+			.flex-item
+			{
+				width: 300px;
+				height: 416px;
+				margin: 50px ;
+				margin-left: 120px;
+				border: 1px black solid;
+				flex-direction: row;
+			}
+			.four
+			{
+				order: 4;
+			}
+			.one
+			{
+				order: 1;
+			}
+			.tow
+			{
+				order: 2;
+			}
+			.five
+			{
+				order: 5;
+			}
+			.three
+			{
+				order: 4;
+			}
+			.six
+			{
+				order: 6;
+			}
+			.seven
+			{
+				order: 0;
+				width: 960px;
+				margin-left: 120px;
+			    margin-right: 120px;
+			    height: 300px;
+			    margin-top: 25px;
+			    border: none;
+			}
+			@media screen and (max-width: 800px) 
+			{
+					* {
+				margin: 0;
+				padding: 0;
+			          }
+			         .four
+			{
+				order: 4;
+				flex-direction: row;
+				flex-basis: 100%;
+		        transition: all 1s;
+			}
+			.one
+			{
+				order: 1;
+				flex-direction: row;
+				flex-basis: 100%;
+		        transition: all 1s;
+			}
+			.tow
+			{
+				order: 2;
+				flex-direction: row;
+				flex-basis: 100%;
+		        transition: all 1s;
+			}
+			.five
+			{
+				order: 5;
+				flex-direction: column;
+				flex-basis: 100%;
+		        transition: all 1s;
+			}
+			.three
+			{
+				order: 4;
+				flex-direction: column;
+				flex-basis: 100%;
+		        transition: all 1s;
+			}
+			.six
+			{
+				order: 6;
+				flex-direction: column;
+				flex-basis: 100%;
+		        transition: all 1s;
+			}
+			.seven
+			{
+				order: 0;
+				width: 960px;
+				margin-left: 120px;
+			    margin-right: 120px;
+			    height: 300px;
+			    margin-top: 25px;
+			    border: none;
+			    flex-direction: column;
+			    display: none;
+			} 
+			}
+			.flex-item img
+			{
+				cursor: pointer;
+				transform: all 0.6s;
+			}
+			.flex-item img:hover
+			{
+				transform: scale(1.2);
+				border: 2px red solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="flex-container">
+			<div class="flex-item seven">
+				<a href=""><img src="../img/QQ图片20191113000356.png"height="390px"width="1300px"/></a>
+			</div>
+			<div class="flex-item one">
+				<a href=""><img src="../img/QQ图片20191113114459.png" width="300px" height="416px"/></a>
+			</div>
+			<div class="flex-item tow">
+				<a href=""><img src="../img/QQ图片20191113113216.png" width="300px" height="416px"/></a>
+			</div>
+			<div class="flex-item three">
+				<a href=""><img src="../img/QQ图片20191113113421.png" width="300px" height="416px"/></a>
+			</div>
+			<div class="flex-item four">
+				<a href=""><img src="../img/QQ图片20191113113619.png" width="300px" height="416px"/></a>
+			</div>
+			<div class="flex-item five">
+				<a href=""><img src="../img/QQ图片20191113113824.png" width="300px" height="416px"/></a>
+			</div>
+			<div class="flex-item six">
+				<a href=""><img src="../img/QQ图片20191113114036.png" width="300px" height="416px"/></a>
+			</div>
+		</div>
+	</body>
+
+</html>
