@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<p align="center">
+			<input type="text" id="userid" placeholder="请输入编号" />
+			<input type="text" id="username" placeholder="请输入姓名" />
+			<input type="text" id="gender" placeholder="请输入性别" />
+			<input type="button" value="添加" id="add" />
+		</p>
+		<table border="1px" align="center" id="tabl" cellspacing="0" cellpadding="5px">
+			<caption style="font: '微软雅黑';font-size:20px;">学生信息表</caption>
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>张三</td>
+				<td>李四</td>
+				<td><input type="button" value="删除" style="color: black;" onclick="delTr(this)" /></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>张伟</td>
+				<td>王丽</td>
+				<td><input type="button" value="删除" style="color: black;" onclick="delTr(this)" /></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>小明</td>
+				<td>小红</td>
+				<td><input type="button" value="删除" style="color: black;" onclick="delTr(this)" /></td>
+			</tr>
+		</table>
+	</body>
+	<script type="text/javascript">
+		document.getElementById("add").onclick = function() {
+
+			var id = document.getElementById("userid").value;
+			var name = document.getElementById("username").value;
+			var gender = document.getElementById("gender").value;
+
+			var tab = document.getElementsByTagName("table")[0];
+			tab.innerHTML += "<tr>\n" +
+				"<td>" + id + "</td>\n" +
+				"<td>" + name + "</td>" +
+				"<td>" + gender + "</td>" +
+				"<td><input type='button' value='删除' onclick='delTr(this)' style='color:black'/></td>" +
+				"</tr>"
+		}
+
+		function delTr(obj) {
+
+			var table = obj.parentNode.parentNode.parentNode;
+			var tr = obj.parentNode.parentNode;
+			table.removeChild(tr);
+		}
+	</script>
+	</body>
+
+</html>
