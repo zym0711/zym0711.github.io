@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*,
+			*:before,
+			*:after {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			
+			.container {
+				width: 1400px;
+				margin: 20px auto;
+				background-image: url(../img/img-c7c977b0ea23a348e220be7fda02678a_mh1575268942.jpg);
+			}
+			
+			.menu {
+				list-style: none;
+				width: 1400px;
+				height: 40px;
+				box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+			}
+			
+			.menu li {
+				float: left;
+			}
+			
+			.menu li a {
+				display: inline-block;
+				color: #666;
+				background-color: #eee;
+				text-decoration: none;
+				position: relative;
+			}
+			
+			.menu li a::before {
+				content: attr(title);
+				color: #888;
+				background-color: #aaa;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: rotateX(-90deg);
+			}
+			
+			.menu li a::after {
+				content: attr(title);
+				color: #fff;
+				background-color: #666;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: rotateX(-180deg);
+			}
+			
+			.menu li a,
+			.menu li a::before,
+			.menu li a::after {
+				width: 200px;
+				height: 40px;
+				text-align: center;
+				font-size: 20px;
+				line-height: 40px;
+				border: 1px solid #ddd;
+				border-width: 0 1px 0 0;
+				transition: all 1s;
+				transform-style: preserve-3d;
+				transform-origin: center center -20px;
+			}
+			
+			.menu li:hover a,
+			.menu li a.cur {
+				transform: rotateX(178deg);
+			}
+			
+			@media (max-width: 900px) {
+				.menu {
+					width: 100%;
+					height: 40px;
+				}
+				.menu li {
+					width: 12.5%;
+				}
+				.menu li a,
+				.menu li a::before,
+				.menu li a::after {
+					width: 100%;
+				}
+			}
+			
+			@media (max-width: 768px) {
+				.menu {
+					width: 100%;
+					height: 80px;
+				}
+				.menu li {
+					width: 25%;
+				}
+				.menu li a,
+				.menu li a::before,
+				.menu li a::after {
+					width: 100%;
+					border-width: 0 1px 1px 0;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				.menu {
+					width: 100%;
+					height: 160px;
+				}
+				.menu li {
+					width: 50%;
+				}
+				.menu li a,
+				.menu li a::before,
+				.menu li a::after {
+					width: 100%;
+					border-width: 0 1px 1px 0;
+				}
+			}
+			
+			@media (max-width: 320px) {
+				.menu {
+					width: 100%;
+					height: 320px;
+				}
+				.menu li {
+					width: 100%;
+				}
+				.menu li a,
+				.menu li a::before,
+				.menu li a::after {
+					width: 100%;
+					border-width: 0 0 1px 0;
+				}
+			}
+			
+			.dianpu {
+				width: 1400px;
+				margin-top: 0px;
+				height: 132px;
+				background: linear-gradient(to right, red, yellow);
+				-webkit-background-clip: text;
+				color: transparent;
+			}
+			
+			.change {
+				width: 1400px;
+				margin-top: 0px;
+				height: 500px;
+				position: relative;
+			}
+			
+			.chzuo {
+				width: 350px;
+				margin-top: 0px;
+				height: 500px;
+				position: absolute;
+				background-image: url(../img/img-251f0648ae6e047fd04645d76da4e7fb.jpg);				
+				margin-left: 0px;
+				content: normal;
+			}
+			
+			.chyou {
+				width: 350px;
+				margin-top: 0px;
+				height: 500px;
+				position: absolute;
+				background-image: url(../img/img-89c08d79afb8101cb8772c9bf7b99762.jpg);
+				margin-left: 1050px;
+			}
+			
+			#lun {
+				width: 700px;
+				height: 500px;
+				overflow: hidden;
+				position: absolute;
+				margin-left: 350px;
+			}
+			
+			#photo {
+				width: 3500px;
+				animation: switch 15s ease-out infinite;
+			}
+			
+			#photo>img {
+				float: left;
+				width: 700px;
+				height: 500px;
+			}
+			
+			@keyframes switch {
+				0%,
+				20% {
+					margin-left: 0;
+				}
+				20%,
+				40% {
+					margin-left: -700px;
+				}
+				40%,
+				60% {
+					margin-left: -1400px;
+				}
+				60%,
+				80% {
+					margin-left: -2100px;
+				}
+				80%,
+				100% {
+					margin-left: -2800px;
+				}
+			}
+			
+			.first {
+				width: 350px;
+				margin-top: 0px;
+				height: 400px;
+				background-color: #1974D7;
+			}
+			
+			.second {
+				width: 350px;
+				margin-top: 300px;
+				margin-left: 300px;
+				height: 200px;
+				background-color: #5F9EA0;
+			}
+			
+			.third {
+				width: 350px;
+				margin-top: 200px;
+				margin-left: 300px;
+				height: 200px;
+				background-color: #5F9EA0;
+			}
+			
+			.four {
+				width: 350px;
+				margin-top: 0px;
+				margin-left: 6500px;
+				height: 200px;
+				background-color: #5F9EA0;
+			}
+			
+			.five {}
+			
+			.jieshao {
+				width: 1400px;
+				margin-top: 0px;
+				height: 400px;
+				background-color: #2F4F4F;
+				position: absolute;
+			}
+			
+			.jiezuo {
+				width: 350px;
+				margin-top: 0px;
+				height: 400px;
+				background-color: #FF7F50;
+				position: absolute;
+			}
+			
+			.jiezhong {
+				width: 700px;
+				margin-top: 0px;
+				margin-left: 350px;
+				height: 400px;
+				background-color: antiquewhite;
+				position: absolute;
+				filter: alpha(opacity=60);
+				-moz-opacity: 0.6;
+				opacity: 0.95;
+			}
+			
+			.jieyou {
+				width: 350px;
+				margin-top: 0px;
+				margin-left: 1050px;
+				height: 400px;
+				background-color: #A0522D;
+				position: absolute;
+			}
+			
+			.xiangmu {
+				width: 1400px;
+				margin-top: 400px;
+				height: 450px;
+				position: relative;
+				
+			}
+			
+			.yi {
+				width: 1000px;
+				margin-left: 200px;
+				margin-right: 200px;
+				margin-top: 50px;
+				height: 350px;
+				background-color: #EEEEEE;
+				position: absolute;
+				filter: alpha(opacity=60);
+				-moz-opacity: 0.6;
+				opacity: 0.7;
+			}
+			
+			.er {
+				width: 1400px;
+				margin-top: 0px;
+				height: 450px;
+				filter: alpha(opacity=60);
+				-moz-opacity: 1;
+				opacity: 0.98;
+				position: absolute;
+				background;
+			}
+			
+			.join {
+				width: 1400px;
+				margin-top: 0px;
+				height: 400px;
+				position: relative;
+				background-color: #CD853F;
+			}
+			
+			body {
+				color: darkcyan
+			}
+			
+			.context {
+				background-color: antiquewhite;
+				filter: alpha(opacity=60);
+				-moz-opacity: 0.6;
+				opacity: 0.95;
+				position: relative;
+				top: 0;
+				width: 1400px;
+				height: 400px;
+				overflow: hidden;
+			}
+			
+			.join {
+				max-width: 600px;
+				height: 400px;
+				padding: 80px 0;
+				text-align: center;
+				margin: 0 auto;
+				filter: alpha(opacity=60);
+				-moz-opacity: 1;
+				opacity: 0.98;
+				background-image: url(../img/zzzztimg.jpg);
+			}
+			
+			.join h1 {
+				font-size: 40px;
+				font-weight: 300;
+			}
+			
+			form {
+				padding: 20px 0;
+			}
+			
+			form input {
+				border: 1px solid #FFF;
+				width: 220px;
+				padding: 10px 15px;
+				display: block;
+				margin: 0 auto 10px auto;
+				border-radius: 30px;
+				font-size: 18px;
+				font-weight: 300;
+				text-align: center;
+			}
+			
+			form button {
+				background: white;
+				border: 0;
+				padding: 10px 15px;
+				color: green;
+				border-radius: 8px;
+				width: 250px;
+				font-size: 16px;
+			}
+			
+			form button:hover {
+				background: #CCC;
+			}
+			
+			.about {
+				width: 1400px;
+				margin-top: 0px;
+				height: 300px;
+				position: relative;
+				
+			}
+			
+			.one {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				margin-left: 200px;
+				margin-top: 50px;
+				text-align: center;
+				display: inline-block;
+				background:darksalmon;
+				text-decoration: none;
+				color: #FF7F50;
+				border-radius: 50%;
+				line-height: 200px;
+				font-size: 25px;
+				filter: alpha(opacity=60);
+				-moz-opacity: 0.6;
+				opacity: 0.3;
+			}
+			
+			.tow {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				margin-left: 600px;
+				margin-top: 50px;
+				text-align: center;
+				display: inline-block;
+				background:darksalmon;
+				text-decoration: none;
+				color:  #FF7F50;
+				border-radius: 50%;
+				line-height: 200px;
+				font-size: 25px;
+				filter: alpha(opacity=60);
+				-moz-opacity: 0.6;
+				opacity: 0.3;
+			}
+			
+			.three {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				margin-left: 1000px;
+				margin-top: 50px;
+				text-align: center;
+				display: inline-block;
+				background:darksalmon;
+				color: #FF7F50;
+				border-radius: 50%;
+				line-height: 200px;
+				font-size: 25px;
+				text-decoration: none;
+				filter: alpha(opacity=60);
+				-moz-opacity: 0.6;
+				opacity: 0.3;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a:visited {
+				text-decoration: none;
+			}
+			
+			a:hover {
+				text-decoration: none;
+			}
+			
+			a:active {
+				text-decoration: none;
+			}
+			
+			.one a:hover {
+				background: #50A3A2;
+				color: black;
+			}
+			
+			.tow a:hover {
+				background: #50A3A2;
+				color: black;
+				text-decoration: none;
+			}
+			
+			.three a:hover {
+				background: #50A3A2;
+				color: black;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<ul class="menu">
+				<li>
+					<a class="cur" title="Home page" href="#">Home page</a>
+				</li>
+				<li>
+					<a title="Introduction" href="#jieshao">Introduction</a>
+				</li>
+				<li>
+					<a title="Project" href="#xiangmu">Project</a>
+				</li>
+				<li>
+					<a title="Join us" href="#join">Join us</a>
+				</li>
+				<li>
+					<a title="About us" href="#about">About us</a>
+				</li>
+				<li>
+					<a title="end" href="#join">end</a>
+				</li>
+				<li>
+					<a title="About us" href="#about"></a>
+				</li>
+			</ul>
+			<div class="dianpu">
+				<b><span style="font-size: 100px;"><p align="center">Zero</p></span></b>
+			</div>
+			<div class="change">
+				<div class="chzuo">
+					<br />
+					<br />
+					<p align="center">
+						<font face="楷体" color="#008B8B" size="6">下午茶来啦</font>
+					</p>
+					<br />
+					<p align="center">
+						<font face="楷体" color="#008B8B" size="6">快来享受美好的</font>
+					</p>
+					<br />
+					<p align="center">
+						<font face="楷体" color="#008B8B" size="6">甜点时光～～</font>
+					</p>​
+				</div>
+				<div class="chyou">
+					<br />
+					<br />
+					<p align="center">
+						<font face="楷体" color="#008B8B" size="6">享受甜点,享受下午的宁静</font>
+					</p>
+					<br />
+					<p align="center">
+						<font face="楷体" color="#008B8B" size="6">放松身心</font>
+					</p>
+					<br />
+					<p align="center">
+						<font face="楷体" color="#008B8B" size="6">静心的听着窗外的鸟叫声</font>
+					</p>
+				</div>
+				<div id="lun">
+
+					<div id="photo">
+						<img src="../img/1575211001127.jpg" />
+						<img src="../img/ztimg.jpg" />
+						<img src="../img/zztimg_mh1575216050665.jpg" />
+						<img src="../img/ytimg.jpg" />
+						<img src="../img/yytimg.jpg" />
+					</div>
+
+				</div>
+			</div>
+			<div class="jieshao">
+				<div id="jieshao"></div>
+				<div class="jiezuo"><img src="../img/pt2019_11_29_13_16_52.jpg" width="100%" height="100%"></div>
+				<div class="jiezhong">
+					<h1><b><p align="center"><font  color="#000000">Zero简介</font></p></b></h1>
+					<font color="#2F4F4F" size="6" face="楷体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zero是零的意思，寓意在喧嚣的城市里忘记烦恼一身轻松安静地享受一份甜品。本店采用日系装修风格，提供日系和西式甜点，中式传统点心，冰淇淋刨冰之类。作为一家小店，我们旨在为顾客提供舒适的环境是他们感受到甜品带来的快乐，暂时忘记生活的烦恼，同时我们追求甜品健康美味，带给顾客最好的享受</font>
+				</div>
+				<div class="jieyou"><img src="../img/pt2019_12_02_00_44_17.jpg" width="100%" height="100%"></div>
+			</div>
+			<div class="xiangmu">
+				<div id="xiangmu"></div>
+				<div class="er"></div>
+				<div class="yi">
+					<font color="black" size="6" face="楷体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本店采取全日制经营，并且提供配送，Zero还将提供DIY制作，提倡顾客自己动手，在动手过程中，享受到甜品带来的欢乐，并将制作较好的成品拍照留念，给予鼓励，让更多热爱甜品的人投入到甜品制作中</font>
+					<font color="black" size="6" face="楷体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;初期将雇佣一批员工，首先保证其具有高素质，使顾客得到最好的体验，从而打造出一批优秀的管理团队，另外要建立健全消费制度和回访制度，定期进行调查，保证甜品种类不断更新</font>
+				</div>
+			</div>
+			<div class="context">
+				<div class="join">
+					<div id="join"></div>
+					<h1>Welcome to join us</h1>
+					<form action="" method="get">
+						<input type="text" name="userid" placeholder="请输入账号" />
+						<input type="password" name="userpw" placeholder="请输入密码" />
+						<a href=""><button type="submit"><p align="center">注册</p></button></a>
+
+					</form>
+				</div>
+			</div>
+			<div class="about">
+				<div id="about"></div>
+				<div class="one">
+					<a href=""><font color="#000000">联系电话</font></a>
+				</div>
+				<div class="tow">
+					<a href=""><font color="#000000">QQ</font></a>
+				</div>
+				<div class="three">
+					<a href=""><font color="#000000">微信</font></a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
